@@ -13,7 +13,7 @@ from PIL import Image, ImageOps
 import random
 import cv2
 from skimage import exposure
-from typing import Any
+from typing import Any, Dict, List
 
 import modules.sd_hijack
 from modules import devices, prompt_parser, masking, sd_samplers, lowvram, generation_parameters_copypaste, extra_networks, sd_vae_approx, scripts, sd_samplers_common, sd_unet, errors, rng
@@ -120,7 +120,7 @@ class StableDiffusionProcessing:
     prompt: str = ""
     prompt_for_display: str = None
     negative_prompt: str = ""
-    styles: list[str] = None
+    styles: List[str] = None
     seed: int = -1
     subseed: int = -1
     subseed_strength: float = 0
@@ -138,7 +138,7 @@ class StableDiffusionProcessing:
     tiling: bool = None
     do_not_save_samples: bool = False
     do_not_save_grid: bool = False
-    extra_generation_params: dict[str, Any] = None
+    extra_generation_params: Dict[str, Any] = None
     overlay_images: list = None
     eta: float = None
     do_not_reload_embeddings: bool = False
@@ -149,7 +149,7 @@ class StableDiffusionProcessing:
     s_tmax: float = None
     s_tmin: float = None
     s_noise: float = None
-    override_settings: dict[str, Any] = None
+    override_settings: Dict[str, Any] = None
     override_settings_restore_afterwards: bool = True
     sampler_index: int = None
     refiner_checkpoint: str = None

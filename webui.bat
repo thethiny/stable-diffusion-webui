@@ -51,6 +51,7 @@ if EXIST %ACCELERATE% goto :accelerate_launch
 
 :launch
 %PYTHON% launch.py %*
+REM --server-name=0.0.0.0 # Uncomment this and put it up if you want to enable it
 if EXIST tmp/restart goto :skip_venv
 pause
 exit /b
